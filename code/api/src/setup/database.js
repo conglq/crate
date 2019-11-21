@@ -7,13 +7,8 @@ import databaseConfig from '../config/database.json'
 
 // Load database config
 const databaseConfigEnv = databaseConfig[NODE_ENV]
-
 // Create new database connection
-const connection = new Sequelize(databaseConfigEnv.database, databaseConfigEnv.username, databaseConfigEnv.password, {
-  host: databaseConfigEnv.host,
-  dialect: databaseConfigEnv.dialect,
-  logging: false
-})
+const connection = new Sequelize(databaseConfigEnv.database, databaseConfigEnv.username, databaseConfigEnv.password, databaseConfigEnv)
 
 // Test connection
 console.info('SETUP - Connecting database...')

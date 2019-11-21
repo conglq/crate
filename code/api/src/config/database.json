@@ -1,10 +1,11 @@
 {
   "development": {
-    "username": "root",
+    "username": null,
     "password": null,
     "database": "crate",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
+    "host": null,
+    "dialect": "sqlite",
+    "storage": "./database.sqlite3",
     "seederStorage": "sequelize"
   },
   "production": {
